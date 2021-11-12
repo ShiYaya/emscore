@@ -94,55 +94,55 @@ if __name__ == '__main__':
     
     
     if 'EMScore(X,V)' in results:
-        print('EMScore(X,V) --------------------------------------')
-        vid_figr_res_P = results['EMScore(X,V)']['figr_P']
-        vid_figr_res_R = results['EMScore(X,V)']['figr_R']
-        vid_figr_res_F = results['EMScore(X,V)']['figr_F']
-        vid_cogr_res = results['EMScore(X,V)']['cogr']
-        vid_full_res_P = results['EMScore(X,V)']['full_P']
-        vid_full_res_R = results['EMScore(X,V)']['full_R']
+        print('EMScore(X,V) correlation --------------------------------------')
+        # vid_figr_res_P = results['EMScore(X,V)']['figr_P']
+        # vid_figr_res_R = results['EMScore(X,V)']['figr_R']
+        # vid_figr_res_F = results['EMScore(X,V)']['figr_F']
+        # vid_cogr_res = results['EMScore(X,V)']['cogr']
+        # vid_full_res_P = results['EMScore(X,V)']['full_P']
+        # vid_full_res_R = results['EMScore(X,V)']['full_R']
         vid_full_res_F = results['EMScore(X,V)']['full_F']
-        compute_correlation_uniquehuman(vid_figr_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_figr_res_R.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_figr_res_F.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_cogr_res.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_full_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_full_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_figr_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_figr_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_figr_res_F.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_cogr_res.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_full_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_full_res_R.numpy(), all_human_scores)
         compute_correlation_uniquehuman(vid_full_res_F.numpy(), all_human_scores)
 
 
     if 'EMScore(X,X*)' in results:
-        print('EMScore(X,X*) --------------------------------------')
+        print('EMScore(X,X*) correlation --------------------------------------')
 
-        refs_figr_res_P = results['EMScore(X,X*)']['figr_P']
-        refs_figr_res_R = results['EMScore(X,X*)']['figr_R']
-        refs_figr_res_F = results['EMScore(X,X*)']['figr_F']
-        refs_cogr_res = results['EMScore(X,X*)']['cogr']
-        refs_full_res_P = results['EMScore(X,X*)']['full_P']
-        refs_full_res_R = results['EMScore(X,X*)']['full_R']
+        # refs_figr_res_P = results['EMScore(X,X*)']['figr_P']
+        # refs_figr_res_R = results['EMScore(X,X*)']['figr_R']
+        # refs_figr_res_F = results['EMScore(X,X*)']['figr_F']
+        # refs_cogr_res = results['EMScore(X,X*)']['cogr']
+        # refs_full_res_P = results['EMScore(X,X*)']['full_P']
+        # refs_full_res_R = results['EMScore(X,X*)']['full_R']
         refs_full_res_F = results['EMScore(X,X*)']['full_F']
-        compute_correlation_uniquehuman(refs_figr_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(refs_figr_res_R.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(refs_figr_res_F.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(refs_cogr_res.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(refs_full_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(refs_full_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_figr_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_figr_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_figr_res_F.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_cogr_res.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_full_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(refs_full_res_R.numpy(), all_human_scores)
         compute_correlation_uniquehuman(refs_full_res_F.numpy(), all_human_scores)
 
 
     if 'EMScore(X,V,X*)' in results:
-        print('EMScore(X,V,X*) --------------------------------------')
-        vid_refs_figr_res_P = results['EMScore(X,V,X*)']['figr_P']
-        vid_refs_figr_res_R = results['EMScore(X,V,X*)']['figr_R']
-        vid_refs_figr_res_F = results['EMScore(X,V,X*)']['figr_F']
-        vid_refs_cogr_res = results['EMScore(X,V,X*)']['cogr']
-        vid_refs_full_res_P = results['EMScore(X,V,X*)']['full_P']
-        vid_refs_full_res_R = results['EMScore(X,V,X*)']['full_R']
+        print('EMScore(X,V,X*) correlation --------------------------------------')
+        # vid_refs_figr_res_P = results['EMScore(X,V,X*)']['figr_P']
+        # vid_refs_figr_res_R = results['EMScore(X,V,X*)']['figr_R']
+        # vid_refs_figr_res_F = results['EMScore(X,V,X*)']['figr_F']
+        # vid_refs_cogr_res = results['EMScore(X,V,X*)']['cogr']
+        # vid_refs_full_res_P = results['EMScore(X,V,X*)']['full_P']
+        # vid_refs_full_res_R = results['EMScore(X,V,X*)']['full_R']
         vid_refs_full_res_F = results['EMScore(X,V,X*)']['full_F']
-        compute_correlation_uniquehuman(vid_refs_figr_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_refs_figr_res_R.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_refs_figr_res_F.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_refs_cogr_res.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_refs_full_res_P.numpy(), all_human_scores)
-        compute_correlation_uniquehuman(vid_refs_full_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_figr_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_figr_res_R.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_figr_res_F.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_cogr_res.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_full_res_P.numpy(), all_human_scores)
+        # compute_correlation_uniquehuman(vid_refs_full_res_R.numpy(), all_human_scores)
         compute_correlation_uniquehuman(vid_refs_full_res_F.numpy(), all_human_scores)
