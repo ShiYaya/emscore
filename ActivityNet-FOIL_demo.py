@@ -228,7 +228,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--storage_path', type=str,  default='./anet_data/',
+    parser.add_argument('--storage_path', type=str,  default='',
                         help='the path you storage ActivityNet-FOIL dataset.')
     parser.add_argument('--verbose', default=True,
                         help='Print intermediate steps.')
