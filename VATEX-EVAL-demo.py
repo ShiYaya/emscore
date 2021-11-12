@@ -8,7 +8,7 @@ import torch
 import math
 from tqdm import tqdm
 from emscore import EMScorer
-from utils import get_idf_dict, compute_correlation_uniquehuman
+from emscore.utils import get_idf_dict, compute_correlation_uniquehuman
 import clip
 
 def get_feats_dict(feat_dir_path):
@@ -24,7 +24,7 @@ def get_feats_dict(feat_dir_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--storage_path', default='video_qe_results_backup/', type=str, help='The path you storage VATEX-EVAL dataset')
+    parser.add_argument('--storage_path', default='', type=str, help='The path you storage VATEX-EVAL dataset')
     parser.add_argument('--vid_base_path', default='', type=str, help='The path you storage VATEX-EVAL videos (optinal, if you use prepared video feats, You do not need to consider this)')
     parser.add_argument('--use_n_refs', default=1, type=int, help='How many references do you want to use for evaluation (1~9)')
     parser.add_argument('--use_feat_cache', default=True, action='store_true', help='Whether to use pre-prepared video features')
