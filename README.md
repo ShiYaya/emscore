@@ -5,7 +5,7 @@ Automatic Video Captioning Evaluation Metric --- EMScore
 
 For an illustration, EMScore can be computed as:
 
-![EMScore](./images/EMScore.png)
+![EMScore](./emscore/images/EMScore.png)
 
 
 
