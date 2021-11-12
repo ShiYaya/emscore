@@ -59,7 +59,7 @@ python demo.py
 ### VATEX-EVAL
 - download the files in the following link, and save at a storage directory  
 ```
-https://drive.google.com/drive/folders/1jAfZZKEgkMEYFF2x1mhYo39nH-TNeGm6?usp=sharing
+In order to comply with the anonymity policy, the link will be made public after acceptance
 ```
 
 - run code
@@ -71,7 +71,7 @@ python VATEX-EVAL-demo.py --storage_path $storage_path --use_n_refs 1 --use_feat
 ### ActivityNet-FOIL
 - download the files in the following link, and save at a storage directory  
 ```
-https://drive.google.com/drive/folders/1oY9EJiEi_db_1GH-R33JDqfE8txffKR3?usp=sharing
+In order to comply with the anonymity policy, the link will be made public after acceptance
 ```
 
 - run code
