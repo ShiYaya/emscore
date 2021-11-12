@@ -16,7 +16,6 @@ from tqdm import tqdm
 import math
 
 
-
 def encode_video(video_file, preprocess, model):
     cap = cv2.VideoCapture(video_file)
     frameCount = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -74,41 +73,14 @@ def extract_dataset_videos_embeddings(preprocess, model, opt):
         # print(vid)
 
 
-def encode_text(vid_caps, model):
-    text_input = clip.tokenize(vid_caps).cuda()
-    with torch.no_grad():
-        text_features = model.encode_text(text_input).float()
-    text_features /= text_features.norm(dim=-1, keepdim=True)
-    return text_features
-
-
-def extract_dataset_sents_embeddings(anno_path, model, opt):
-    dataset = opt.dataset
-    save_dir_path = os.path.join(opt.save_path, 'clip_caps_feats')
-
-    if not os.path.exists(save_dir_path):
-        os.makedirs(save_dir_path)
-    anno_data = json.load(open(anno_path))
-    for vid in anno_data:
-        save_vid_path = os.path.join(save_dir_path, vid+'.pt')
-        if os.path.exists(save_vid_path):
-            continue
-        vid_caps = anno_data[vid]
-        vid_caps_embedddings = encode_text(vid_caps, model).cpu().data
-        torch.save(vid_caps_embedddings, save_vid_path)
-        # print(vid)
-
 
 if __name__ == "__main__":
     parse = argparse.ArgumentParser()
-    parse.add_argument('--videos_path', type=str, default='/mnt/disk1/yyshi/dataset/vatex/val_videos')
-    parse.add_argument('--save_path', type=str, default='/mnt/disk1/yyshi/code/Vision_Language_Bert/video/syy_CLIP_Video_Representation/data/vatex_video_qe', 
+    parse.add_argument('--videos_path', type=str, default='')
+    parse.add_argument('--save_path', type=str, default='', 
         help='the path to save reformat files')
     parse.add_argument('--backbone', type=str, default='RN50')
     opt = parse.parse_args()
-
-
-    anno_data = '/mnt/disk1/yyshi/code/Vision_Language_Bert/video/syy_CLIP_Video_Representation/data/vatex/val_en_annotations.json'
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # backbone = ['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/16']
@@ -123,4 +95,3 @@ if __name__ == "__main__":
     model, preprocess = clip.load(opt.backbone, device=device)
     
     extract_dataset_videos_embeddings(preprocess, model, opt)
-    extract_dataset_sents_embeddings(anno_data, model, opt)
