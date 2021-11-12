@@ -7,7 +7,7 @@ import glob
 import torch
 import math
 from tqdm import tqdm
-from scorer import EMScorer
+from emscore import EMScorer
 from utils import get_idf_dict, compute_correlation_uniquehuman
 import clip
 

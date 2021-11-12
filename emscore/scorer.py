@@ -10,7 +10,7 @@ import time
 from collections import defaultdict
 
 
-from utils import em_cos_score, get_idf_dict
+from .utils import em_cos_score, get_idf_dict
 
 class EMScorer:
     """
