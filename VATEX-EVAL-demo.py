@@ -48,7 +48,6 @@ if __name__ == '__main__':
     """
     Video feats prepare
     """
-    use_uniform_sample = 10
 
     if not opt.use_feat_cache:
         vids = [vid_base_path+vid+'.mp4' for vid in video_ids]
@@ -56,12 +55,6 @@ if __name__ == '__main__':
     else:
         vid_clip_feats_dir = os.path.join(opt.storage_path, 'VATEX-EVAL_video_feats')
         video_clip_feats_dict = get_feats_dict(vid_clip_feats_dir)
-        if use_uniform_sample:
-            for vid in video_clip_feats_dict:
-                data = video_clip_feats_dict[vid]
-                select_index = np.linspace(0, len(data)-1, use_uniform_sample)
-                select_index = [int(index) for index in select_index]
-                video_clip_feats_dict[vid] = data[select_index]
 
         vids = video_ids.tolist()
         metric = EMScorer(vid_feat_cache=video_clip_feats_dict)
