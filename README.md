@@ -89,7 +89,7 @@ python extract_video_embeddings.py --videos_path $your_video_path  --save_path $
 ## Citation
 If you find this code useful for your research, please consider citing:
 
-
+```
 @inproceedings{DBLP:conf/cvpr/ShiYXYLHZ22,
   author    = {Yaya Shi and
                Xu Yang and
@@ -104,3 +104,4 @@ If you find this code useful for your research, please consider citing:
                {CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022},
   year      = {2022},
 }
+```
