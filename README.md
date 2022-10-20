@@ -84,3 +84,23 @@ if you want extract embeddings by yourself:
 ```
 python extract_video_embeddings.py --videos_path $your_video_path  --save_path $your_storage_path --backbone 'ViT-B/32' 
 ```
+
+
+## Citation
+If you find this code useful for your research, please consider citing:
+
+
+@inproceedings{DBLP:conf/cvpr/ShiYXYLHZ22,
+  author    = {Yaya Shi and
+               Xu Yang and
+               Haiyang Xu and
+               Chunfeng Yuan and
+               Bing Li and
+               Weiming Hu and
+               Zheng{-}Jun Zha},
+  title     = {EMScore: Evaluating Video Captioning via Coarse-Grained and Fine-Grained
+               Embedding Matching},
+  booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition,
+               {CVPR} 2022, New Orleans, LA, USA, June 18-24, 2022},
+  year      = {2022},
+}
